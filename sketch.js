@@ -35,7 +35,7 @@ for (let i = 0; i < 1000000; i++) {
 }
 fvertices = new Float32Array(fvertices);
 
-let resolutionScalar = 1;
+let resolutionScalar = 0.5;
 let resolutionBG;
 
 let fmouse = [0, 0];
@@ -284,10 +284,11 @@ draw = function() {
     if (tabsLoaded) {
         if (exporting && exportCount < maxFrames) {
             frameExport();
+            exportCount++;
+            drawCount = exportCount;
+        } else {
+            drawCount += drawIncrement;
         }    
-        drawCount += drawIncrement;
-        exportCount++;
-        drawCount = exportCount;
     }
 }
 
@@ -563,6 +564,7 @@ logLatency = function() {
 
 setTabs = function() {
 
+if (false) {
 drawTerminal = function(selectedProgram) {
     num = 0;
     vertices = [];
@@ -649,6 +651,7 @@ drawTerminal = function(selectedProgram) {
     if (vt.playback) {
         vt.play();
     }
+}
 }
 
     roundedSquare.vertText = `
