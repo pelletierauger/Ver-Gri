@@ -813,6 +813,8 @@ GrimoireTab.prototype.display = function() {
 
 tb("sssss");
 ge.t.scroll.y = 407;
+
+
 buildFace = function() {
     let face = [];
     let c = ge.t.canvas.data;
