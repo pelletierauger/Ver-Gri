@@ -29,3 +29,64 @@ ffmpeg -y -f image2 -framerate 24 \
 -crf 21 -preset medium \
 -threads 1 \
 -shortest /Volumes/Volumina/video-renders/grimoire/bouleaux-ora-crf21.mp4
+
+
+
+
+——————————————————————————————————
+
+
+ffmpeg -y -f image2 -framerate 24 \
+-i /Volumes/Volumina/frames/face-fog/face-fog-%05d.png \
+-c:v libx264 -x264-params "keyint=15:no-deblock=1" -pix_fmt yuv420p \
+-sws_flags spline+accurate_rnd+full_chroma_int \
+-vf "colorspace=bt709:iall=bt601-6-625:fast=1" \
+-color_range 1 -colorspace 1 -color_primaries 1 -color_trc 1 \
+-crf 21 -preset ultrafast \
+-threads 1 \
+-shortest /Volumes/Volumina/video-renders/face-fog-crf21.mp4
+
+
+ffmpeg -y -f image2 -framerate 24 \
+-i /Volumes/Volumina/frames/face-fog-hom-arb/face-fog-hom-arb-%05d.png \
+-c:v libx264 -x264-params "keyint=15:no-deblock=1" -pix_fmt yuv420p \
+-sws_flags spline+accurate_rnd+full_chroma_int \
+-vf "colorspace=bt709:iall=bt601-6-625:fast=1" \
+-color_range 1 -colorspace 1 -color_primaries 1 -color_trc 1 \
+-crf 21 -preset ultrafast \
+-threads 1 \
+-shortest /Volumes/Volumina/video-renders/face-fog-hom-arb-crf21.mp4
+
+
+ffmpeg -y -f image2 -framerate 24 \
+-i /Volumes/Volumina/frames/face-fog-hom-arb/face-fog-hom-arb-%05d.png \
+-c:v libx264 -x264-params "keyint=15:no-deblock=1" -pix_fmt yuv420p \
+-sws_flags spline+accurate_rnd+full_chroma_int \
+-vf "colorspace=bt709:iall=bt601-6-625:fast=1" \
+-color_range 1 -colorspace 1 -color_primaries 1 -color_trc 1 \
+-crf 21 -preset slow \
+-threads 1 \
+-shortest /Volumes/Volumina/video-renders/face-fog-hom-arb-crf21.mp4
+
+
+ffmpeg -y -f image2 -framerate 24 \
+-i /Volumes/Volumina/frames/face-fog-bess/face-fog-bess-%05d.png \
+-c:v libx264 -x264-params "keyint=15:no-deblock=1" -pix_fmt yuv420p \
+-sws_flags spline+accurate_rnd+full_chroma_int \
+-vf "colorspace=bt709:iall=bt601-6-625:fast=1" \
+-color_range 1 -colorspace 1 -color_primaries 1 -color_trc 1 \
+-crf 21 -preset slow \
+-threads 1 \
+-shortest /Volumes/Volumina/video-renders/face-fog-bess-crf21.mp4
+
+
+
+ffmpeg -y -f image2 -framerate 24 \
+-i /Volumes/Volumina/frames/face-fog-frowny-forest/face-fog-frowny-forest-%05d.png \
+-c:v libx264 -x264-params "keyint=15:no-deblock=1" -pix_fmt yuv420p \
+-sws_flags spline+accurate_rnd+full_chroma_int \
+-vf "colorspace=bt709:iall=bt601-6-625:fast=1" \
+-color_range 1 -colorspace 1 -color_primaries 1 -color_trc 1 \
+-crf 21 -preset ultrafast \
+-threads 1 \
+-shortest /Volumes/Volumina/video-renders/face-fog-frowny-forest-crf21.mp4
